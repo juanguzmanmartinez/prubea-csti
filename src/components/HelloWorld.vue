@@ -17,7 +17,7 @@ onMounted(async () => {
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <box-icon name="rocket"></box-icon>
+    <!-- <box-icon name="rocket"></box-icon> -->
 
     <h3>
       You’ve successfully created a project with
