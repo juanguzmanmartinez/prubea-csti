@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      injectRegister: "auto",
       manifest: {
         theme_color: "#212fb0",
         background_color: "#4926a9",
