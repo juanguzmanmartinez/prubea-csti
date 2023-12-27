@@ -25,7 +25,7 @@ export default defineConfig({
           {
             urlPattern: ({ url }) => {
               return url.pathname.startsWith(
-                "aspexpressapi-production.up.railway.app"
+                "https://aspexpressapi-production.up.railway.app/.*'"
               );
             },
             handler: "CacheFirst",

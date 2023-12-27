@@ -5,11 +5,13 @@ import HeartIcon from "../../core/components/icons/heart/HeartIcon.vue";
 import WifiIcon from "../../core/components/icons/wifi/WifiIcon.vue";
 import BulbIcon from "../../core/components/icons/bulb/BulbIcon.vue";
 import CalendarIcon from "../../core/components/icons/calendar/CalendarIcon.vue";
+import Skeleton from "../../core/components/skeleton/Skeleton.vue";
 </script>
 <template>
   <div class="balance-view-container">
     <div class="balance-view-information">
       <div>
+        <Skeleton />
         <p>Saldo virtual <InfoIcon /></p>
         <h3>S/ 150.00 <RefreshIcon /></h3>
         <button><HeartIcon /> ¿Cómo cargar mi saldo virtual?</button>
