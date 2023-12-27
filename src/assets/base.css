@@ -132,6 +132,9 @@ body {
 svg.icon-sky {
   fill: #0080ff;
 }
+svg.icon-orange {
+  fill: #fe7f35;
+}
 
 /*divider*/
 .divider {

@@ -23,6 +23,7 @@ const getProviders = computed(() => {
 onMounted(() => {
   store.getProvidersList();
 });
+
 const handleClick = () => {
   router.push({ name: "recarga" });
 };
@@ -31,13 +32,13 @@ const handleClick = () => {
 <template>
   <div class="providers-view-container">
     <div class="providers-view-container__search">
-      <p>Buscar empresa</p>
-      <div>
+      <p class="text-primary">Buscar empresa</p>
+      <div class="providers-view-container__search--input">
         <input type="text" placeholder="ej. Culqui" />
-        <SearchIcon />
+        <SearchIcon customClass="orange" />
       </div>
     </div>
-    <div>
+    <div class="providers-view-container__filter">
       <Button customClass="button-generic"><HeartIcon /> Todas</Button>
       <Button customClass="button-generic"><StarIcon /> Favoritas</Button>
       <Button customClass="button-generic"><PhoneIcon /> Todas</Button>
@@ -60,6 +61,30 @@ const handleClick = () => {
 <style lang="scss" scoped>
 .providers-view-container {
   padding: 20px;
+  &__search {
+    margin-bottom: 15px;
+    p {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    &--input {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #f0f0f0;
+
+      input {
+        width: 100%;
+        border: none;
+        background: none;
+      }
+    }
+  }
+  &__filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
   &__providers {
     &--provider {
       display: flex;
