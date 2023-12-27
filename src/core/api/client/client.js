@@ -3,12 +3,11 @@ import axios from "axios";
 let instance = null;
 const API_URL = import.meta.env.VITE_API_URL;
 const TOKEN = import.meta.env.VITE_TOKEN;
-console.log("API_URL",API_URL);
 const HTTP = axios.create({
   baseURL: API_URL,
   headers: {
     "Content-type": "application/json",
-    Authorization:`bearer ${TOKEN}`
+    Authorization: `bearer ${TOKEN}`,
   },
 });
 
