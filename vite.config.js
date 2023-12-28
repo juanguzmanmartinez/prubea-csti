@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      injectRegister: "auto",
       manifest: {
         theme_color: "#212fb0",
         background_color: "#4926a9",
@@ -40,7 +41,25 @@ export default defineConfig({
           },
         ],
       },
-
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => {
+              return url.pathname.startsWith(
+                "https://aspexpressapi-production.up.railway.app/.*'"
+              );
+            },
+            handler: "CacheFirst",
+            options: {
+              cacheName: "api-cache",
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+        ],
+      },
       // strategies: "injectManifest",
       // srcDir: "src",
       // filename: "sw.js",
