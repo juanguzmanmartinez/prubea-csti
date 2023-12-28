@@ -41,9 +41,9 @@ export default defineConfig({
         ],
       },
 
-      strategies: "injectManifest",
-      srcDir: "src",
-      filename: "sw.js",
+      // strategies: "injectManifest",
+      // srcDir: "src",
+      // filename: "sw.js",
     }),
   ],
   resolve: {
